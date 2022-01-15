@@ -1,0 +1,155 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #ccc;
+    display: grid;
+    justify-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+li a{
+    text-decoration: none;
+    background: #fff;
+    padding: .7rem 1.5rem;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    color: #000;
+    border: solid 0.2rem #fff;
+}
+
+li a:hover {
+    border: solid 0.2rem red;
+}
+
+.todos-quadros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+    max-width: 1200px;
+}
+h3 {
+    margin: 0px;
+}
+
+.fig1-bikcraft {
+    padding: 4rem;
+    padding-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 15rem;
+}
+
+.fig2-bicicleta {
+    width: 100%;
+}
+
+.primeiro-quadro{
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    justify-items: flex-end;
+    text-align: end;
+    background: white;
+    padding: 40px;
+    position: relative;
+}
+
+body::before{
+    content: "";
+    width: 5rem;
+    height: .3rem;
+    background: red;
+    position: absolute;
+    margin-left: -1.rem;
+    margin-top: 18rem;
+    z-index: 1;
+}
+
+.terceiro-quadro {
+    text-transform: uppercase;
+    align-self: center;
+    text-align: right;
+    margin-right: 2.5rem;
+    font-size: 3rem;
+    color: darkgray;
+    background: url("./imagens/onda.svg");
+    position: relative;
+}
+
+.quarto-quadro {
+    padding: 3rem;
+    background-color: white;
+    display: grid;
+}
+
+.quarto-quadro section:nth-child(odd){
+    background: #ccc;
+}
+
+.quarto-quadro-grid1:hover::before, 
+.quarto-quadro-grid2:hover::before,
+.quarto-quadro-grid3:hover::before{
+    content: "";
+    display: inline;
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 0.6rem;
+    height: 7.8rem;
+    background: red;
+    position: absolute;
+}
+
+.quarto-quadro-grid1,
+.quarto-quadro-grid2,
+.quarto-quadro-grid3{
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 10px 20px;
+    padding: 20px;
+    margin: 0;
+}
+
+.quarto-quadro-grid1 p,
+.quarto-quadro-grid2 p,
+.quarto-quadro-grid3 p{
+    grid-column: 2;
+}
+
+section h1 {
+    margin: 0px;
+    font-size: 2rem;
+}
+
+section p, a {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+section a {
+    background-color:  red;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+section a:hover{
+    background: #900;
+}
+
+footer {
+    background: white;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
