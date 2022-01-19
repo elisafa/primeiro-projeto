@@ -42,15 +42,14 @@ li a:hover {
     margin-top: 2rem;
     margin-bottom: 2rem;
     max-width: 1000px;
-    position: relative;
 }
-.todos-quadros::before{
+.primeiro-quadro::before{
     content: "";
     width: 5rem;
     height: .3rem;
     background: blue;
     position: absolute;
-    margin-left: 35rem;
+    margin-right: -2rem;
     margin-top: 2rem;
     z-index: 1;
 }
@@ -59,6 +58,7 @@ li a:hover {
     display: block;
 }
 .primeiro-quadro{
+    position: relative;
     display: grid;
     align-content: center;
     gap: 50px;
@@ -80,51 +80,37 @@ h3 {
     background: url("./imagens/onda.svg");
     position: relative;
 }
-
 .quarto-quadro {
     padding: 3rem;
-    gap: 2rem;
+    gap: 0rem;
     background-color: #ffffff;
     display: grid;
 }
-
 .quadro-item:nth-child(odd){
     background: #ccc;
 }
-
-.quadro-item:hover::before{
-    content: "";
-    /* display: inline; */
-    margin-left: -20px;
-    margin-top: -20px;
-    width: 0.6rem;
-    height: 7.8rem;
-    background: red;
-    position: absolute;
+.quadro-item:hover{
+    border-left: 5px solid red;
 }
-
 .quadro-item{
+    border-left: 4px solid transparent;
     display: grid;
     grid-template-columns: auto 1fr; 
     gap: 10px 20px; /* distância entre as linhas e depois distância entre as colunas */
     padding: 20px;
     margin: 0;
 }
-
 .quadro-item p{
     grid-column: 2;
 }
-
 section h1 {
     margin: 0px;
     font-size: 2.3rem;
 }
-
 section p, a {
     margin: 0;
     font-size: 1.3rem;
 }
-
 section a {
     background-color:  red;
     padding: 1rem 2rem;
@@ -133,11 +119,9 @@ section a {
     text-transform: uppercase;
     color: white;
 }
-
 section a:hover{
     background: #900;
 }
-
 footer {
     box-sizing: border-box;
     background: white;
