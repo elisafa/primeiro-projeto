@@ -1,81 +1,79 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: #ccc;
+    background: #cccccc;
     display: grid;
     justify-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-ul {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
-}
-
-li a{
-    text-decoration: none;
-    background: #fff;
-    padding: .7rem 1.5rem;
-    border-radius: .4rem;
-    text-transform: uppercase;
-    color: #000;
-    border: solid 0.2rem #fff;
-}
-
-li a:hover {
-    border: solid 0.2rem red;
-}
-
-.todos-quadros{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 3rem;
-    max-width: 1200px;
-}
-h3 {
+p, h1,h2,h3{
     margin: 0px;
 }
-
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style-type: none;
+}
 .fig1-bikcraft {
-    padding: 4rem;
-    padding-bottom: 2.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: 15rem;
 }
-
-.fig2-bicicleta {
-    width: 100%;
+li a{
+    text-decoration: none;
+    background: #ffffff;
+    padding: .7rem 1.5rem;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    color: #000000;
+    border: solid 0.2rem #ffffff;
 }
-
-.primeiro-quadro{
+li a:hover {
+    border: solid 0.2rem red;
+}
+.todos-quadros{
     display: grid;
-    align-content: center;
-    gap: 20px;
-    justify-items: flex-end;
-    text-align: end;
-    background: white;
-    padding: 40px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1000px;
     position: relative;
 }
-
-body::before{
+.todos-quadros::before{
     content: "";
     width: 5rem;
     height: .3rem;
-    background: red;
+    background: blue;
     position: absolute;
-    margin-left: -1.rem;
-    margin-top: 18rem;
+    margin-left: 35rem;
+    margin-top: 2rem;
     z-index: 1;
 }
-
+.fig2-bicicleta {
+    width: 100%;
+    display: block;
+}
+.primeiro-quadro{
+    display: grid;
+    align-content: center;
+    gap: 50px;
+    justify-items: flex-end;
+    text-align: right;
+    background: #ffffff;
+    padding: 40px;
+}
+h3 {
+    margin: 0px;
+}
 .terceiro-quadro {
     text-transform: uppercase;
     align-self: center;
-    text-align: right;
+    text-align: center;
     margin-right: 2.5rem;
     font-size: 3rem;
     color: darkgray;
@@ -85,19 +83,18 @@ body::before{
 
 .quarto-quadro {
     padding: 3rem;
-    background-color: white;
+    gap: 2rem;
+    background-color: #ffffff;
     display: grid;
 }
 
-.quarto-quadro section:nth-child(odd){
+.quadro-item:nth-child(odd){
     background: #ccc;
 }
 
-.quarto-quadro-grid1:hover::before, 
-.quarto-quadro-grid2:hover::before,
-.quarto-quadro-grid3:hover::before{
+.quadro-item:hover::before{
     content: "";
-    display: inline;
+    /* display: inline; */
     margin-left: -20px;
     margin-top: -20px;
     width: 0.6rem;
@@ -106,25 +103,21 @@ body::before{
     position: absolute;
 }
 
-.quarto-quadro-grid1,
-.quarto-quadro-grid2,
-.quarto-quadro-grid3{
+.quadro-item{
     display: grid;
     grid-template-columns: auto 1fr; 
-    gap: 10px 20px;
+    gap: 10px 20px; /* distância entre as linhas e depois distância entre as colunas */
     padding: 20px;
     margin: 0;
 }
 
-.quarto-quadro-grid1 p,
-.quarto-quadro-grid2 p,
-.quarto-quadro-grid3 p{
+.quadro-item p{
     grid-column: 2;
 }
 
 section h1 {
     margin: 0px;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 section p, a {
@@ -146,10 +139,9 @@ section a:hover{
 }
 
 footer {
+    box-sizing: border-box;
     background: white;
-    padding: 1rem;
-    margin: 0;
+    padding: 1.5rem;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
 }
