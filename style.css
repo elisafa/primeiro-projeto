@@ -53,9 +53,10 @@ li a:hover {
     margin-top: 2rem;
     z-index: 1;
 }
-.fig2-bicicleta {
-    width: 100%;
-    display: block;
+.segundo-quadro img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .primeiro-quadro{
     position: relative;
@@ -128,4 +129,59 @@ footer {
     padding: 1.5rem;
     width: 100%;
     text-align: center;
+}
+
+@media (max-width: 1000px){
+    .todos-quadros{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        gap: 3rem;
+    }
+    .primeiro-quadro::before{
+        display: none;
+    }
+    .primeiro-quadro{
+        text-align: center;
+        justify-items: center;
+    }
+    .terceiro-quadro{
+        padding: 4rem;
+    }
+}
+@media (max-width: 800px){
+    .todos-quadros{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        gap: 3rem;
+    }
+    .primeiro-quadro::before{
+        display: none;
+    }
+    .primeiro-quadro{
+        text-align: center;
+        justify-items: center;
+        /* font-size: 1rem; */
+        gap: 20px;
+    }
+    .terceiro-quadro{
+        padding: 4rem;
+    }
+    .primeiro-quadro a{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .primeiro-quadro h1 {
+        font-size: 2rem;
+    }
+    .primeiro-quadro p{
+        font-size: 1rem;
+    }
+    li a{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
 }
